@@ -1,0 +1,5 @@
+C:\Games\CsharpActivity\OneMap_QA\obj\Debug\net6.0\OneMap_QA.csproj.AssemblyReference.cache
+C:\Games\CsharpActivity\OneMap_QA\obj\Debug\net6.0\OneMap_QA.GeneratedMSBuildEditorConfig.editorconfig
+C:\Games\CsharpActivity\OneMap_QA\obj\Debug\net6.0\OneMap_QA.AssemblyInfoInputs.cache
+C:\Games\CsharpActivity\OneMap_QA\obj\Debug\net6.0\OneMap_QA.AssemblyInfo.cs
+C:\Games\CsharpActivity\OneMap_QA\obj\Debug\net6.0\OneMap_QA.csproj.CoreCompileInputs.cache
