@@ -18,6 +18,10 @@ namespace UiAutomation.Setup.EssentialButtons
             _driver = webDriverManager.GetDriver(); // Get the WebDriver instance
         }
 
+        public IWebElement RouteIcon => _driver.FindElement(By.Id("route-icon"));
+        public IWebElement OriginLocation => _driver.FindElement(By.Id("originInput"));
+        public IWebElement DestinationLocation => _driver.FindElement(By.Id("destinationInput"));
+
         public IWebElement CommunityButton => _driver.FindElement(By.Id("Community"));
         public IWebElement SearchLocation => _driver.FindElement(By.Id("search_property"));
         public List<IWebElement> SearchResult => new List<IWebElement>

@@ -47,17 +47,17 @@ namespace UiAutomation.Tests.EssentialButtonTests
         }
 
         [Test]
-        public void Find_Community_Location()
+        public void Find_Location()
         {
-            communityWebElements.SearchLocation.SendKeys(searchText);
+            driver.Manage().Timeouts().ImplicitWait=TimeSpan.FromSeconds(10);
 
-            Thread.Sleep(3000);
+            type(communityWebElements.SearchLocation, searchText, expectedAddress);
 
             wait.Until(driver => communityWebElements.SearchResult.Count > 0);
 
-            foreach(IWebElement locationAddress in communityWebElements.SearchResult)
+            foreach (IWebElement locationAddress in communityWebElements.SearchResult)
             {
-                if(locationAddress.Text.Equals(expectedAddress))
+                if (locationAddress.Text.Equals(expectedAddress))
                 {
                     locationAddress.Click();
                 }
@@ -66,8 +66,52 @@ namespace UiAutomation.Tests.EssentialButtonTests
             string actualLocationAddress = communityWebElements.LocationInfoBox.FindElements(By.TagName("span"))
                 .LastOrDefault().Text;
 
-            Assert.That(actualLocationAddress, 
-                Is.EqualTo(expectedAddress));
+            Assert.That(actualLocationAddress, Is.EqualTo(expectedAddress), "Location Address not same");
         }
+
+        [Test]
+        [TestCase("Marina Bay", "1 BAYFRONT AVENUE MARINA BAY SANDS SINGAPORE 018971")]
+        public void NavigateToLocation(string destination, string destinationAddress)
+        {
+            string origin = searchText;
+            string originAddress = expectedAddress;
+
+            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
+
+            communityWebElements.RouteIcon.Click();
+
+            type(communityWebElements.OriginLocation, origin, originAddress);
+
+            type(communityWebElements.DestinationLocation, destination, destinationAddress);
+        }
+
+        #region private methods
+        private void type(IWebElement element, string textToType, string addressToFind)
+        {
+            element.Click();
+            element.Clear();
+
+            foreach (char letter in textToType)
+            {
+                element.SendKeys(letter.ToString());
+                Thread.Sleep(5);
+            }
+
+            wait.Until(driver => communityWebElements.SearchResult.Count > 0);
+
+            try
+            {
+                foreach (IWebElement locationAddress in communityWebElements.SearchResult)
+                {
+                    if (locationAddress.Text.Equals(addressToFind))
+                    {
+                        locationAddress.Click();
+                        break;
+                    }
+                }
+            }
+            catch (Exception ex) { }
+        }
+        #endregion
     }
 }

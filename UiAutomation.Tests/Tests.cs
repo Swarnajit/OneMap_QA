@@ -12,16 +12,16 @@ namespace UiAutomation.Tests
             try
             {
                 ChromeOptions options = new ChromeOptions();
-                options.AddArgument("--headless");
-                options.AddArgument("--disable-gpu");
+                //options.AddArgument("--headless");
+                //options.AddArgument("--disable-gpu");
 
-                options.AddArgument("--no-sandbox");
-                options.AddArgument("--disable-dev-shm-usage");
+                //options.AddArgument("--no-sandbox");
+                //options.AddArgument("--disable-dev-shm-usage");
                 // Initialize ChromeDriver with options
 
                 string path = Directory.GetParent(Environment.CurrentDirectory).Parent.FullName;
                 driver = new ChromeDriver(path + @"\drivers\", options);
-                //driver.Manage().Window.Maximize();
+                driver.Manage().Window.Maximize();
                 driver.Navigate().GoToUrl("https://www.onemap.gov.sg/");
                 //driver = new ChromeDriver(options);
 
