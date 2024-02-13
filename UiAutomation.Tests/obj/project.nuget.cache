@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "80fanubpGqe3IfCOLHhN6y9j/lzdTq9d+jUl8abW+/GybgGGqdeCKda1qHVOXRkkhPr9VoL97t4qjn78MfT7SQ==",
+  "dgSpecHash": "tPdQGxJlIs4DgNzhnMnPvUoAJn/B2yQ0Bvgtxios5zfh1l9y+xTphEAa1Itgu2yxbLXJoqDYyUJqksL4+EZg4w==",
   "success": true,
   "projectFilePath": "C:\\Games\\CsharpActivity\\OneMap_QA\\UiAutomation.Tests\\UiAutomation.Tests.csproj",
   "expectedPackageFiles": [
@@ -30,7 +30,9 @@
     "C:\\Users\\swarn\\.nuget\\packages\\selenium.webdriver.geckodriver\\0.34.0\\selenium.webdriver.geckodriver.0.34.0.nupkg.sha512",
     "C:\\Users\\swarn\\.nuget\\packages\\selenium.webdriver.iedriver\\4.14.0\\selenium.webdriver.iedriver.4.14.0.nupkg.sha512",
     "C:\\Users\\swarn\\.nuget\\packages\\seleniumextras.waithelpers\\1.0.2\\seleniumextras.waithelpers.1.0.2.nupkg.sha512",
-    "C:\\Users\\swarn\\.nuget\\packages\\system.reflection.metadata\\1.6.0\\system.reflection.metadata.1.6.0.nupkg.sha512"
+    "C:\\Users\\swarn\\.nuget\\packages\\system.configuration.configurationmanager\\8.0.0\\system.configuration.configurationmanager.8.0.0.nupkg.sha512",
+    "C:\\Users\\swarn\\.nuget\\packages\\system.reflection.metadata\\1.6.0\\system.reflection.metadata.1.6.0.nupkg.sha512",
+    "C:\\Users\\swarn\\.nuget\\packages\\system.security.cryptography.protecteddata\\8.0.0\\system.security.cryptography.protecteddata.8.0.0.nupkg.sha512"
   ],
   "logs": []
 }

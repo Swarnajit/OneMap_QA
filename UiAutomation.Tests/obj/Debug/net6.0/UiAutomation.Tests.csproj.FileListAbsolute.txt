@@ -12,6 +12,7 @@ C:\Games\CsharpActivity\OneMap_QA\UiAutomation.Tests\bin\Debug\net6.0\nunit.engi
 C:\Games\CsharpActivity\OneMap_QA\UiAutomation.Tests\bin\Debug\net6.0\nunit.engine.api.dll
 C:\Games\CsharpActivity\OneMap_QA\UiAutomation.Tests\bin\Debug\net6.0\nunit.engine.core.dll
 C:\Games\CsharpActivity\OneMap_QA\UiAutomation.Tests\bin\Debug\net6.0\testcentric.engine.metadata.dll
+C:\Games\CsharpActivity\OneMap_QA\UiAutomation.Tests\bin\Debug\net6.0\App.config
 C:\Games\CsharpActivity\OneMap_QA\UiAutomation.Tests\bin\Debug\net6.0\UiAutomation.Tests.dll.config
 C:\Games\CsharpActivity\OneMap_QA\UiAutomation.Tests\bin\Debug\net6.0\UiAutomation.Tests.deps.json
 C:\Games\CsharpActivity\OneMap_QA\UiAutomation.Tests\bin\Debug\net6.0\UiAutomation.Tests.runtimeconfig.json
@@ -31,6 +32,8 @@ C:\Games\CsharpActivity\OneMap_QA\UiAutomation.Tests\bin\Debug\net6.0\nunit.fram
 C:\Games\CsharpActivity\OneMap_QA\UiAutomation.Tests\bin\Debug\net6.0\WebDriver.Support.dll
 C:\Games\CsharpActivity\OneMap_QA\UiAutomation.Tests\bin\Debug\net6.0\WebDriver.dll
 C:\Games\CsharpActivity\OneMap_QA\UiAutomation.Tests\bin\Debug\net6.0\SeleniumExtras.WaitHelpers.dll
+C:\Games\CsharpActivity\OneMap_QA\UiAutomation.Tests\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
+C:\Games\CsharpActivity\OneMap_QA\UiAutomation.Tests\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
 C:\Games\CsharpActivity\OneMap_QA\UiAutomation.Tests\bin\Debug\net6.0\cs\Microsoft.TestPlatform.CoreUtilities.resources.dll
 C:\Games\CsharpActivity\OneMap_QA\UiAutomation.Tests\bin\Debug\net6.0\cs\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
 C:\Games\CsharpActivity\OneMap_QA\UiAutomation.Tests\bin\Debug\net6.0\de\Microsoft.TestPlatform.CoreUtilities.resources.dll

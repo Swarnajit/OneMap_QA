@@ -1,6 +1,7 @@
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Support.UI;
+using System.Configuration;
 
 namespace UiAutomation.Tests
 {
@@ -9,30 +10,19 @@ namespace UiAutomation.Tests
         [SetUp]
         public static IWebDriver SetUp(IWebDriver driver)
         {
-            try
-            {
-                ChromeOptions options = new ChromeOptions();
-                //options.AddArgument("--headless");
-                //options.AddArgument("--disable-gpu");
+            string path = "C:\\Games\\CsharpActivity\\OneMap_QA\\bin\\drivers\\chromedriver.exe";
 
-                //options.AddArgument("--no-sandbox");
-                //options.AddArgument("--disable-dev-shm-usage");
-                // Initialize ChromeDriver with options
+            ChromeOptions options = new ChromeOptions();
+            options.AddArgument("--headless");
 
-                string path = Directory.GetParent(Environment.CurrentDirectory).Parent.FullName;
-                driver = new ChromeDriver(path + @"\drivers\", options);
-                driver.Manage().Window.Maximize();
-                driver.Navigate().GoToUrl("https://www.onemap.gov.sg/");
-                //driver = new ChromeDriver(options);
+            // Initialize ChromeDriver with options
 
+            driver = new ChromeDriver(path, options);
 
-                return driver;
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-                return null;
-            }
+            driver.Manage().Window.Size = new System.Drawing.Size(1920, 1080);
+            driver.Navigate().GoToUrl("https://www.onemap.gov.sg/");
+
+            return driver;
         }
         [TearDown]
         public static void CloseBrowser(IWebDriver driver)

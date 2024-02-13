@@ -7,6 +7,8 @@ using UiAutomation.Setup.EssentialButtons;
 
 namespace UiAutomation.Tests
 {
+    [TestFixture]
+    [Parallelizable]
     public class BasePageTests
     {
         private IWebDriver driver;

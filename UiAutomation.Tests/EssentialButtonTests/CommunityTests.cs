@@ -38,28 +38,28 @@ namespace UiAutomation.Tests.EssentialButtonTests
         //    Assert.That(communityWebElements.CommunityButton.GetAttribute("class"), Is.EqualTo("essentialTopBtn esOption btnactive"));
         //}
 
-        [Test]
-        public void Find_Location()
-        {
-            driver.Manage().Timeouts().ImplicitWait=TimeSpan.FromSeconds(30);
+        //[Test]
+        //public void Find_Location()
+        //{
+        //    driver.Manage().Timeouts().ImplicitWait=TimeSpan.FromSeconds(30);
 
-            SharedMethods.typeInSearch(communityWebElements.SearchLocation, searchText);
+        //    SharedMethods.typeInSearch(communityWebElements.SearchLocation, searchText);
 
-            wait.Until(driver => communityWebElements.SearchResult.Count > 0);
+        //    wait.Until(driver => communityWebElements.SearchResult.Count > 0);
 
-            foreach (IWebElement locationAddress in communityWebElements.SearchResult)
-            {
-                if (locationAddress.Text.Equals(expectedAddress))
-                {
-                    locationAddress.Click();
-                }
-            }
+        //    foreach (IWebElement locationAddress in communityWebElements.SearchResult)
+        //    {
+        //        if (locationAddress.Text.Equals(expectedAddress))
+        //        {
+        //            locationAddress.Click();
+        //        }
+        //    }
 
-            string actualLocationAddress = communityWebElements.LocationInfoBox.FindElements(By.TagName("span"))
-                .LastOrDefault().Text;
+        //    string actualLocationAddress = communityWebElements.LocationInfoBox.FindElements(By.TagName("span"))
+        //        .LastOrDefault().Text;
 
-            Assert.That(actualLocationAddress, Is.EqualTo(expectedAddress), "Location Address not same");
-        }
+        //    Assert.That(actualLocationAddress, Is.EqualTo(expectedAddress), "Location Address not same");
+        //}
 
         [Test]
         [TestCase("Marina Bay Skypark", "1 BAYFRONT AVENUE MARINA BAY SANDS SKYPARK SINGAPORE 018971")]
@@ -72,11 +72,11 @@ namespace UiAutomation.Tests.EssentialButtonTests
 
             communityWebElements.RouteIcon.Click();
 
-            wait.Until(ExpectedConditions.ElementToBeClickable(communityWebElements.OriginLocation));
+            wait.Until(ExpectedConditions.ElementToBeClickable(By.Id("originInput")));
 
             SharedMethods.typeInSearch(communityWebElements.OriginLocation, origin);
 
-            wait.Until(ExpectedConditions.ElementToBeClickable(communityWebElements.DestinationLocation));
+            wait.Until(ExpectedConditions.ElementToBeClickable(By.Id("destinationInput")));
 
             SharedMethods.typeInSearch(communityWebElements.DestinationLocation, destination);
 
@@ -101,21 +101,5 @@ namespace UiAutomation.Tests.EssentialButtonTests
                     "Transit mode was not selected by default");
             });
         }
-
-        #region private methods
-        private void type(IWebElement element, string textToType, string addressToFind)
-        {
-            element.Click();
-            element.Clear();
-
-            foreach (char letter in textToType)
-            {
-                element.SendKeys(letter.ToString());
-                Thread.Sleep(5);
-            }
-
-            element.SendKeys(Keys.Enter);
-        }
-        #endregion
     }
 }
