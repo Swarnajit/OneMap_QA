@@ -1,16 +1,8 @@
-﻿using Microsoft.VisualBasic.FileIO;
-using NUnit.Framework.Internal;
+﻿using NUnit.Framework.Internal;
 using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
-using OpenQA.Selenium.DevTools.V119.Autofill;
-using OpenQA.Selenium.DevTools.V121.FedCm;
 using OpenQA.Selenium.Support.UI;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using UiAutomation.Setup;
+using SeleniumExtras.WaitHelpers;
+using System.Diagnostics.Metrics;
 using UiAutomation.Setup.EssentialButtons;
 
 namespace UiAutomation.Tests.EssentialButtonTests
@@ -22,7 +14,7 @@ namespace UiAutomation.Tests.EssentialButtonTests
         private Community communityWebElements;
 
         private const string searchText = "Chinatown";
-        private const string expectedAddress = "46 PAGODA STREET CHINATOWN HERITAGE CENTRE SINGAPORE 059205";
+        private const string expectedAddress = "335 SMITH STREET CHINATOWN COMPLEX SINGAPORE 050335";
 
         [SetUp]
         public void SetUp()
@@ -49,7 +41,7 @@ namespace UiAutomation.Tests.EssentialButtonTests
         [Test]
         public void Find_Location()
         {
-            driver.Manage().Timeouts().ImplicitWait=TimeSpan.FromSeconds(10);
+            driver.Manage().Timeouts().ImplicitWait=TimeSpan.FromSeconds(30);
 
             type(communityWebElements.SearchLocation, searchText, expectedAddress);
 
@@ -70,7 +62,7 @@ namespace UiAutomation.Tests.EssentialButtonTests
         }
 
         [Test]
-        [TestCase("Marina Bay", "1 BAYFRONT AVENUE MARINA BAY SANDS SINGAPORE 018971")]
+        [TestCase("Marina Bay Skypark", "1 BAYFRONT AVENUE MARINA BAY SANDS SKYPARK SINGAPORE 018971")]
         public void NavigateToLocation(string destination, string destinationAddress)
         {
             string origin = searchText;
@@ -80,9 +72,16 @@ namespace UiAutomation.Tests.EssentialButtonTests
 
             communityWebElements.RouteIcon.Click();
 
+            wait.Until(ExpectedConditions.ElementToBeClickable(communityWebElements.OriginLocation));
+
             type(communityWebElements.OriginLocation, origin, originAddress);
 
+            wait.Until(ExpectedConditions.ElementToBeClickable(communityWebElements.DestinationLocation));
+
             type(communityWebElements.DestinationLocation, destination, destinationAddress);
+
+            Assert.True(communityWebElements.RouteOptionTransit.GetAttribute("class").Contains("active"),
+                "Transit mode was not selected by default");
         }
 
         #region private methods
@@ -97,20 +96,7 @@ namespace UiAutomation.Tests.EssentialButtonTests
                 Thread.Sleep(5);
             }
 
-            wait.Until(driver => communityWebElements.SearchResult.Count > 0);
-
-            try
-            {
-                foreach (IWebElement locationAddress in communityWebElements.SearchResult)
-                {
-                    if (locationAddress.Text.Equals(addressToFind))
-                    {
-                        locationAddress.Click();
-                        break;
-                    }
-                }
-            }
-            catch (Exception ex) { }
+            element.SendKeys(Keys.Enter);
         }
         #endregion
     }

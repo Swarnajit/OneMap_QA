@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "pJIkqN3AYbkmIuTHBYpqK3xfTnspc3gfHG3Wie1Mp4d2Y18YGY4dlXzO34lgNw5mhjhyJuJ+nbFPrGeO5SwWig==",
+  "dgSpecHash": "kv78LWuERIdAOzOe6TsIYM6uJh7XJnTtXWIdKlQN+aAAAjkNkfMHlJWwPOUCQ9VaLJJjGM7QDrwom4XrX4Vl1A==",
   "success": true,
   "projectFilePath": "C:\\Games\\CsharpActivity\\OneMap_QA\\UiAutomation.Setup.csproj",
   "expectedPackageFiles": [
@@ -21,6 +21,7 @@
     "C:\\Users\\swarn\\.nuget\\packages\\selenium.webdriver.chromedriver\\121.0.6167.8500\\selenium.webdriver.chromedriver.121.0.6167.8500.nupkg.sha512",
     "C:\\Users\\swarn\\.nuget\\packages\\selenium.webdriver.geckodriver\\0.34.0\\selenium.webdriver.geckodriver.0.34.0.nupkg.sha512",
     "C:\\Users\\swarn\\.nuget\\packages\\selenium.webdriver.iedriver\\4.14.0\\selenium.webdriver.iedriver.4.14.0.nupkg.sha512",
+    "C:\\Users\\swarn\\.nuget\\packages\\seleniumextras.waithelpers\\1.0.2\\seleniumextras.waithelpers.1.0.2.nupkg.sha512",
     "C:\\Users\\swarn\\.nuget\\packages\\system.reflection.metadata\\1.6.0\\system.reflection.metadata.1.6.0.nupkg.sha512"
   ],
   "logs": []

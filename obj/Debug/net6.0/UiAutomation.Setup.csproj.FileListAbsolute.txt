@@ -9,6 +9,7 @@ C:\Games\CsharpActivity\OneMap_QA\bin\Debug\net6.0\nunit.engine.dll
 C:\Games\CsharpActivity\OneMap_QA\bin\Debug\net6.0\nunit.engine.api.dll
 C:\Games\CsharpActivity\OneMap_QA\bin\Debug\net6.0\nunit.engine.core.dll
 C:\Games\CsharpActivity\OneMap_QA\bin\Debug\net6.0\testcentric.engine.metadata.dll
+C:\Games\CsharpActivity\OneMap_QA\bin\Debug\net6.0\UiAutomation.Setup.dll.config
 C:\Games\CsharpActivity\OneMap_QA\bin\Debug\net6.0\UiAutomation.Setup.deps.json
 C:\Games\CsharpActivity\OneMap_QA\bin\Debug\net6.0\UiAutomation.Setup.runtimeconfig.json
 C:\Games\CsharpActivity\OneMap_QA\bin\Debug\net6.0\UiAutomation.Setup.dll
@@ -26,6 +27,7 @@ C:\Games\CsharpActivity\OneMap_QA\bin\Debug\net6.0\NuGet.Frameworks.dll
 C:\Games\CsharpActivity\OneMap_QA\bin\Debug\net6.0\nunit.framework.dll
 C:\Games\CsharpActivity\OneMap_QA\bin\Debug\net6.0\WebDriver.Support.dll
 C:\Games\CsharpActivity\OneMap_QA\bin\Debug\net6.0\WebDriver.dll
+C:\Games\CsharpActivity\OneMap_QA\bin\Debug\net6.0\SeleniumExtras.WaitHelpers.dll
 C:\Games\CsharpActivity\OneMap_QA\bin\Debug\net6.0\cs\Microsoft.TestPlatform.CoreUtilities.resources.dll
 C:\Games\CsharpActivity\OneMap_QA\bin\Debug\net6.0\cs\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
 C:\Games\CsharpActivity\OneMap_QA\bin\Debug\net6.0\de\Microsoft.TestPlatform.CoreUtilities.resources.dll

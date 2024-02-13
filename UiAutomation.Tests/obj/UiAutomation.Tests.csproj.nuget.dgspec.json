@@ -76,6 +76,10 @@
               "target": "Package",
               "version": "[4.14.0, )"
             },
+            "SeleniumExtras.WaitHelpers": {
+              "target": "Package",
+              "version": "[1.0.2, )"
+            },
             "coverlet.collector": {
               "target": "Package",
               "version": "[3.2.0, )"
@@ -164,6 +168,10 @@
             "Selenium.WebDriver": {
               "target": "Package",
               "version": "[4.17.0, )"
+            },
+            "SeleniumExtras.WaitHelpers": {
+              "target": "Package",
+              "version": "[1.0.2, )"
             },
             "coverlet.collector": {
               "target": "Package",

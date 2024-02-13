@@ -12,6 +12,7 @@ C:\Games\CsharpActivity\OneMap_QA\UiAutomation.Tests\bin\Debug\net6.0\nunit.engi
 C:\Games\CsharpActivity\OneMap_QA\UiAutomation.Tests\bin\Debug\net6.0\nunit.engine.api.dll
 C:\Games\CsharpActivity\OneMap_QA\UiAutomation.Tests\bin\Debug\net6.0\nunit.engine.core.dll
 C:\Games\CsharpActivity\OneMap_QA\UiAutomation.Tests\bin\Debug\net6.0\testcentric.engine.metadata.dll
+C:\Games\CsharpActivity\OneMap_QA\UiAutomation.Tests\bin\Debug\net6.0\UiAutomation.Tests.dll.config
 C:\Games\CsharpActivity\OneMap_QA\UiAutomation.Tests\bin\Debug\net6.0\UiAutomation.Tests.deps.json
 C:\Games\CsharpActivity\OneMap_QA\UiAutomation.Tests\bin\Debug\net6.0\UiAutomation.Tests.runtimeconfig.json
 C:\Games\CsharpActivity\OneMap_QA\UiAutomation.Tests\bin\Debug\net6.0\UiAutomation.Tests.dll
@@ -29,6 +30,7 @@ C:\Games\CsharpActivity\OneMap_QA\UiAutomation.Tests\bin\Debug\net6.0\NuGet.Fram
 C:\Games\CsharpActivity\OneMap_QA\UiAutomation.Tests\bin\Debug\net6.0\nunit.framework.dll
 C:\Games\CsharpActivity\OneMap_QA\UiAutomation.Tests\bin\Debug\net6.0\WebDriver.Support.dll
 C:\Games\CsharpActivity\OneMap_QA\UiAutomation.Tests\bin\Debug\net6.0\WebDriver.dll
+C:\Games\CsharpActivity\OneMap_QA\UiAutomation.Tests\bin\Debug\net6.0\SeleniumExtras.WaitHelpers.dll
 C:\Games\CsharpActivity\OneMap_QA\UiAutomation.Tests\bin\Debug\net6.0\cs\Microsoft.TestPlatform.CoreUtilities.resources.dll
 C:\Games\CsharpActivity\OneMap_QA\UiAutomation.Tests\bin\Debug\net6.0\cs\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
 C:\Games\CsharpActivity\OneMap_QA\UiAutomation.Tests\bin\Debug\net6.0\de\Microsoft.TestPlatform.CoreUtilities.resources.dll
@@ -96,6 +98,7 @@ C:\Games\CsharpActivity\OneMap_QA\UiAutomation.Tests\bin\Debug\net6.0\zh-Hant\Mi
 C:\Games\CsharpActivity\OneMap_QA\UiAutomation.Tests\bin\Debug\net6.0\zh-Hant\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
 C:\Games\CsharpActivity\OneMap_QA\UiAutomation.Tests\bin\Debug\net6.0\UiAutomation.Setup.dll
 C:\Games\CsharpActivity\OneMap_QA\UiAutomation.Tests\bin\Debug\net6.0\UiAutomation.Setup.pdb
+C:\Games\CsharpActivity\OneMap_QA\UiAutomation.Tests\bin\Debug\net6.0\UiAutomation.Setup.dll.config
 C:\Games\CsharpActivity\OneMap_QA\UiAutomation.Tests\obj\Debug\net6.0\UiAutomation.Tests.csproj.AssemblyReference.cache
 C:\Games\CsharpActivity\OneMap_QA\UiAutomation.Tests\obj\Debug\net6.0\UiAutomation.Tests.GeneratedMSBuildEditorConfig.editorconfig
 C:\Games\CsharpActivity\OneMap_QA\UiAutomation.Tests\obj\Debug\net6.0\UiAutomation.Tests.AssemblyInfoInputs.cache
