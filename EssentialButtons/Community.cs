@@ -28,12 +28,9 @@ namespace UiAutomation.Setup.EssentialButtons
             (_driver.FindElements(By.ClassName("searchresult_address")));
         public IWebElement LocationInfoBox => _driver.FindElement(By.Id("markerInfoContent"));
         public IWebElement RouteOptionBus => _driver.FindElement(By.Id("routeOptionItem_Bus"));
-        public IWebElement RouteOptionTransit => _driver.FindElement(By.Id("routeOptionItem_Transit")); 
-
-        //public List<IWebElement> TransitOptions => new List<IWebElement>
-        //    (_driver.FindElements(By.XPath("//div[contains(@class,'routeOptionItem')]")));
-        public IWebElement SchoolQueryButton { get; set; }
-        public IWebElement MedicalButton { get; set; }
-        public IWebElement HawkersCenterButton { get; set; }
+        public IWebElement RouteOptionTransit => _driver.FindElement(By.Id("routeOptionItem_Transit"));
+        public IWebElement RouteOptionCar => _driver.FindElement(By.Id("routeOptionItem_Car"));
+        public IWebElement RouteOptionCycle => _driver.FindElement(By.Id("routeOptionItem_Cycle"));
+        public IWebElement RouteOptionWalk => _driver.FindElement(By.Id("routeOptionItem_Walk"));
     }
 }

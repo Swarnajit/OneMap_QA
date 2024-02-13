@@ -4,7 +4,7 @@ using OpenQA.Selenium.Support.UI;
 
 namespace UiAutomation.Tests
 {
-    public static class Tests
+    public class Tests
     {
         [SetUp]
         public static IWebDriver SetUp(IWebDriver driver)

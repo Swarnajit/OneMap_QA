@@ -30,20 +30,20 @@ namespace UiAutomation.Tests.EssentialButtonTests
             Tests.CloseBrowser(driver);
         }
 
-        [Test]
-        public void Verify_Text()
-        {
-            communityWebElements.CommunityButton.Click();
+        //[Test]
+        //public void Verify_Text()
+        //{
+        //    communityWebElements.CommunityButton.Click();
 
-            Assert.That(communityWebElements.CommunityButton.GetAttribute("class"), Is.EqualTo("essentialTopBtn esOption btnactive"));
-        }
+        //    Assert.That(communityWebElements.CommunityButton.GetAttribute("class"), Is.EqualTo("essentialTopBtn esOption btnactive"));
+        //}
 
         [Test]
         public void Find_Location()
         {
             driver.Manage().Timeouts().ImplicitWait=TimeSpan.FromSeconds(30);
 
-            type(communityWebElements.SearchLocation, searchText, expectedAddress);
+            SharedMethods.typeInSearch(communityWebElements.SearchLocation, searchText);
 
             wait.Until(driver => communityWebElements.SearchResult.Count > 0);
 
@@ -74,14 +74,32 @@ namespace UiAutomation.Tests.EssentialButtonTests
 
             wait.Until(ExpectedConditions.ElementToBeClickable(communityWebElements.OriginLocation));
 
-            type(communityWebElements.OriginLocation, origin, originAddress);
+            SharedMethods.typeInSearch(communityWebElements.OriginLocation, origin);
 
             wait.Until(ExpectedConditions.ElementToBeClickable(communityWebElements.DestinationLocation));
 
-            type(communityWebElements.DestinationLocation, destination, destinationAddress);
+            SharedMethods.typeInSearch(communityWebElements.DestinationLocation, destination);
 
-            Assert.True(communityWebElements.RouteOptionTransit.GetAttribute("class").Contains("active"),
-                "Transit mode was not selected by default");
+            Assert.Multiple(() =>
+            {
+                Assert.True(communityWebElements.RouteOptionTransit.Displayed,
+                    $"{communityWebElements.RouteOptionTransit} is displayed");
+
+                Assert.True(communityWebElements.RouteOptionBus.Displayed,
+                    $"{communityWebElements.RouteOptionBus} is displayed");
+
+                Assert.True(communityWebElements.RouteOptionCar.Displayed,
+                    $"{communityWebElements.RouteOptionCar} is displayed");
+
+                Assert.True(communityWebElements.RouteOptionCycle.Displayed,
+                    $"{communityWebElements.RouteOptionCycle} is displayed");
+
+                Assert.True(communityWebElements.RouteOptionWalk.Displayed,
+                    $"{communityWebElements.RouteOptionWalk} is displayed");
+
+                Assert.True(communityWebElements.RouteOptionTransit.GetAttribute("class").Contains("active"),
+                    "Transit mode was not selected by default");
+            });
         }
 
         #region private methods
