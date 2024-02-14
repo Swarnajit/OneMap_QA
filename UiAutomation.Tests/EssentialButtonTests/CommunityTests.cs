@@ -19,7 +19,7 @@ namespace UiAutomation.Tests.EssentialButtonTests
         [SetUp]
         public void SetUp()
         {
-            driver = Tests.SetUp(driver);
+            driver = Tests.SetUp();
             wait = new WebDriverWait(driver, new TimeSpan(0, 0, 30));
             communityWebElements = new Community(driver);
         }
@@ -27,7 +27,7 @@ namespace UiAutomation.Tests.EssentialButtonTests
         [TearDown]
         public void CloseBrowser()
         {
-            Tests.CloseBrowser(driver);
+            Tests.CloseBrowser();
         }
 
         //[Test]

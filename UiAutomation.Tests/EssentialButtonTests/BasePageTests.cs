@@ -18,7 +18,7 @@ namespace UiAutomation.Tests
         [SetUp]
         public void SetUp()
         {
-            driver = Tests.SetUp(driver);
+            driver = Tests.SetUp();
             wait = new WebDriverWait(driver, new TimeSpan(0, 0, 30));
             basePageWebElements = new BasePage(driver);
         }
@@ -26,16 +26,15 @@ namespace UiAutomation.Tests
         [TearDown]
         public void CloseBrowser()
         {
-            Tests.CloseBrowser(driver);
+            Tests.CloseBrowser();
         }
 
         [Test]
         public void Validate_WebsiteBanner()
         {
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(30);
-            Assert.AreEqual("A Singapore Government Agency Website",
-                basePageWebElements.GovBanner.Text,
-                $"{basePageWebElements.GovBanner.Text}");
+            AssertScreenshot.AreEqual("A Singapore Government Agency Website",
+                basePageWebElements.GovBanner.Text);
         }
 
         [Test]
@@ -52,12 +51,10 @@ namespace UiAutomation.Tests
 
             Assert.Multiple(() =>
             {
-                Assert.IsNotNull(basePageWebElements.NoResultFoundPopUp,
-                    $"{basePageWebElements.NoResultFoundPopUp.GetAttribute("p")}");
+                AssertScreenshot.IsNotNull(basePageWebElements.NoResultFoundPopUp);
 
-                Assert.AreEqual("No results found. Please shift to another area.",
-                    basePageWebElements.NoResultFoundTextArea.Text,
-                    $"{basePageWebElements.NoResultFoundPopUp} was not displayed");
+                AssertScreenshot.AreEqual("No results found. Please to another area.",
+                    basePageWebElements.NoResultFoundTextArea.Text);
             });
             basePageWebElements.NoResultFoundPopUp.FindElement(By.TagName("button")).Click();
         }
@@ -87,12 +84,10 @@ namespace UiAutomation.Tests
 
             Assert.Multiple(() =>
             {
-                Assert.IsNotNull(basePageWebElements.NoResultFoundPopUp,
-                    $"{basePageWebElements.NoResultFoundPopUp.GetAttribute("p")}");
+                AssertScreenshot.IsNotNull(basePageWebElements.NoResultFoundPopUp);
 
-                Assert.AreEqual("No results found. Please shift to another area.",
-                    basePageWebElements.NoResultFoundTextArea.Text,
-                    $"{basePageWebElements.NoResultFoundPopUp} was not displayed");
+                AssertScreenshot.AreEqual("No results found. Please shift to another area.",
+                    basePageWebElements.NoResultFoundTextArea.Text);
             });
             basePageWebElements.NoResultFoundPopUp.FindElement(By.TagName("button")).Click();
         }
@@ -122,12 +117,10 @@ namespace UiAutomation.Tests
 
             Assert.Multiple(() =>
             {
-                Assert.IsNotNull(basePageWebElements.NoResultFoundPopUp,
-                    $"{basePageWebElements.NoResultFoundPopUp.GetAttribute("p")}");
+                AssertScreenshot.IsNotNull(basePageWebElements.NoResultFoundPopUp);
 
-                Assert.AreEqual("No results found. Please shift to another area.",
-                    basePageWebElements.NoResultFoundTextArea.Text,
-                    $"{basePageWebElements.NoResultFoundPopUp} was not displayed");
+                AssertScreenshot.AreEqual("No results found. Please shift to another area.",
+                    basePageWebElements.NoResultFoundTextArea.Text);
             });
             basePageWebElements.NoResultFoundPopUp.FindElement(By.TagName("button")).Click();
         }
@@ -152,7 +145,7 @@ namespace UiAutomation.Tests
             SharedMethods.typeInSearch(basePageWebElements.SearchLocation, searchText);
             basePageWebElements.SchoolQueryButton.Click();
 
-            Thread.Sleep(3000);
+            wait.Until(ExpectedConditions.ElementToBeClickable(basePageWebElements.SchoolBlock));
 
             Assert.Multiple(() =>
             {

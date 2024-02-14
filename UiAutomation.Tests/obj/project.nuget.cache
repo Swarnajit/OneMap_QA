@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "tPdQGxJlIs4DgNzhnMnPvUoAJn/B2yQ0Bvgtxios5zfh1l9y+xTphEAa1Itgu2yxbLXJoqDYyUJqksL4+EZg4w==",
+  "dgSpecHash": "A389E0AOdywiMBWewYm9fn/ut861/OJtmy83z1PIDYtcYMrruEWfvAWkuoMskJ4PUZQBySFlZ4Fscb4oMTcSOg==",
   "success": true,
   "projectFilePath": "C:\\Games\\CsharpActivity\\OneMap_QA\\UiAutomation.Tests\\UiAutomation.Tests.csproj",
   "expectedPackageFiles": [
@@ -10,6 +10,7 @@
     "C:\\Users\\swarn\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\swarn\\.nuget\\packages\\microsoft.testplatform.objectmodel\\17.5.0\\microsoft.testplatform.objectmodel.17.5.0.nupkg.sha512",
     "C:\\Users\\swarn\\.nuget\\packages\\microsoft.testplatform.testhost\\17.5.0\\microsoft.testplatform.testhost.17.5.0.nupkg.sha512",
+    "C:\\Users\\swarn\\.nuget\\packages\\microsoft.win32.systemevents\\8.0.0\\microsoft.win32.systemevents.8.0.0.nupkg.sha512",
     "C:\\Users\\swarn\\.nuget\\packages\\netstandard.library\\2.0.0\\netstandard.library.2.0.0.nupkg.sha512",
     "C:\\Users\\swarn\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
     "C:\\Users\\swarn\\.nuget\\packages\\nuget.frameworks\\5.11.0\\nuget.frameworks.5.11.0.nupkg.sha512",
@@ -31,6 +32,7 @@
     "C:\\Users\\swarn\\.nuget\\packages\\selenium.webdriver.iedriver\\4.14.0\\selenium.webdriver.iedriver.4.14.0.nupkg.sha512",
     "C:\\Users\\swarn\\.nuget\\packages\\seleniumextras.waithelpers\\1.0.2\\seleniumextras.waithelpers.1.0.2.nupkg.sha512",
     "C:\\Users\\swarn\\.nuget\\packages\\system.configuration.configurationmanager\\8.0.0\\system.configuration.configurationmanager.8.0.0.nupkg.sha512",
+    "C:\\Users\\swarn\\.nuget\\packages\\system.drawing.common\\8.0.2\\system.drawing.common.8.0.2.nupkg.sha512",
     "C:\\Users\\swarn\\.nuget\\packages\\system.reflection.metadata\\1.6.0\\system.reflection.metadata.1.6.0.nupkg.sha512",
     "C:\\Users\\swarn\\.nuget\\packages\\system.security.cryptography.protecteddata\\8.0.0\\system.security.cryptography.protecteddata.8.0.0.nupkg.sha512"
   ],
