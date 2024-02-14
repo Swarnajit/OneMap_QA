@@ -7,8 +7,9 @@ using System.Threading.Tasks;
 
 namespace UiAutomation.Tests
 {
-    public class SharedMethods
+    public static class SharedMethods
     {
+        public static string ScreenshotPath = "C:\\Games\\CsharpActivity\\OneMap_QA\\UiAutomation.Tests\\Screenshots\\";
         public static void typeInSearch(IWebElement element, string textToType)
         {
             element.Click();

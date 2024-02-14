@@ -1,12 +1,26 @@
+using AventStack.ExtentReports;
+using AventStack.ExtentReports.Reporter;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Support.UI;
 using System.Drawing.Imaging;
+using System.Reflection;
 
 namespace UiAutomation.Tests
 {
     public class AssertScreenshot
     {
+        private ExtentReports extent;
+        private ExtentTest test;
+
+        [OneTimeSetUp]
+        public void SetupReporting()
+        {
+            // Initialize ExtentReports and create a new test
+            var sparkReporter = new ExtentSparkReporter("extent-report.html");
+            extent = new ExtentReports();
+            extent.AttachReporter(sparkReporter);
+        }
         private static string Screenshot()
         {
             // Take a screenshot
@@ -16,7 +30,7 @@ namespace UiAutomation.Tests
             string timestamp = DateTime.Now.ToString("yyyyMMddHHmmss");
 
             // Save the screenshot with timestamp in the filename
-            string screenshotFilePath = $"screenshot_{timestamp}.png";
+            string screenshotFilePath = $"{SharedMethods.ScreenshotPath}+{timestamp}.png";
             screenshot.SaveAsFile(screenshotFilePath);
 
             Console.WriteLine("Screenshot saved to: " + screenshotFilePath);

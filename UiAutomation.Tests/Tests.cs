@@ -14,7 +14,6 @@ namespace UiAutomation.Tests
             {
                 {"chromeDriverPath", "C:\\Games\\CsharpActivity\\OneMap_QA\\bin\\drivers\\chromedriver.exe" },
                 {"mozillaDriverPath", "C:\\Games\\CsharpActivity\\OneMap_QA\\bin\\drivers\\geckodriver.exe" },
-                {"ieDriverPath", "C:\\Games\\CsharpActivity\\OneMap_QA\\bin\\drivers\\geckodriver.exe" },
             };
 
         [SetUp]
@@ -22,7 +21,7 @@ namespace UiAutomation.Tests
         {
             ChromeOptions options = new ChromeOptions();
             //options.AddArgument("--headless");
-            options.AddArgument("--disable-notifications");
+            //options.AddArgument("--disable-notifications");
             // Initialize ChromeDriver with options
 
             driver = new ChromeDriver(chromeDriverPath, options);
@@ -95,10 +94,5 @@ namespace UiAutomation.Tests
                 }
             }
         }
-        //public static void CloseBrowser()
-        //{
-        //    driver.Close();
-        //    driver.Quit();
-        //}
     }
 }
