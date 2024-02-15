@@ -12,16 +12,16 @@ namespace UiAutomation.Tests
         private static Dictionary<string, string> driverPaths =
             new Dictionary<string, string>()
             {
-                {"chromeDriverPath", "C:\\Games\\CsharpActivity\\OneMap_QA\\bin\\drivers\\chromedriver.exe" },
-                {"mozillaDriverPath", "C:\\Games\\CsharpActivity\\OneMap_QA\\bin\\drivers\\geckodriver.exe" },
+                {"chromeDriverPath", "path to chromedriver"},
+                {"mozillaDriverPath", "path to geckodriver" },
             };
 
         [SetUp]
         public static IWebDriver ChromeSetUp(string chromeDriverPath)
         {
             ChromeOptions options = new ChromeOptions();
-            //options.AddArgument("--headless");
-            //options.AddArgument("--disable-notifications");
+            options.AddArgument("--headless");
+            options.AddArgument("--disable-notifications");
             // Initialize ChromeDriver with options
 
             driver = new ChromeDriver(chromeDriverPath, options);
@@ -34,7 +34,7 @@ namespace UiAutomation.Tests
         public static IWebDriver FirefoxSetUp(string mozillaDriverPath)
         {
             FirefoxOptions options = new FirefoxOptions();
-            //options.AddArgument("--headless");
+            options.AddArgument("--headless");
             options.AddArgument("--disable-notifications");
             options.SetPreference("geo.prompt.testing", true);
             options.SetPreference("geo.prompt.testing.allow", false);
@@ -52,7 +52,7 @@ namespace UiAutomation.Tests
             IWebDriver setUpdriver = null;
             foreach (KeyValuePair<string, string> driverPath in driverPaths)
             {
-                switch(driverPath.Key)
+                switch (driverPath.Key)
                 {
                     case "chromeDriverPath":
                         setUpdriver = ChromeSetUp(driverPath.Value);

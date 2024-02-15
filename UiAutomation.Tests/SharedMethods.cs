@@ -9,7 +9,7 @@ namespace UiAutomation.Tests
 {
     public static class SharedMethods
     {
-        public static string ScreenshotPath = "C:\\Games\\CsharpActivity\\OneMap_QA\\UiAutomation.Tests\\Screenshots\\";
+        public static string ScreenshotPath = "Path to screenshots folder";
         public static void typeInSearch(IWebElement element, string textToType)
         {
             element.Click();
